@@ -59,6 +59,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [terms-and-conditions]()
 - [screen-support-faq](screens/support-faq)
 - [screen-about-the-app](screens/about-the-app)
+- [react-native-app-menu](modules/app-menu)
 
 # Getting started: Frontend
 
