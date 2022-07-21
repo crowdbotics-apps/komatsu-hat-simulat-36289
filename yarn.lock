@@ -1216,7 +1216,10 @@
     redux-thunk "^2.4.1"
     reselect "^4.1.5"
 
-"@screens/support-faq@file:./screens/support-faq/":
+"@screens/about-the-app@file:./screens/about-the-app/":
+  version "1.0.0"
+
+"@screens/support-faq@file:./screens/support-faq":
   version "1.0.0"
 
 "@screens/terms-and-conditions@file:./screens/terms-and-conditions":
