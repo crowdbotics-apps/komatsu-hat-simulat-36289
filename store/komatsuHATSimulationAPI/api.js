@@ -1,90 +1,88 @@
-import axios from "axios"
+import axios from "axios";
 const komatsuHATSimulationAPI = axios.create({
   baseURL: "https://komatsu-hat-simulat-36289.botics.co",
-  headers: { Accept: "application/json", "Content-Type": "application/json" }
-})
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json"
+  }
+});
+
 function api_v1_login_create(payload) {
-  return komatsuHATSimulationAPI.post(`/api/v1/login/`)
+  return komatsuHATSimulationAPI.post(`/api/v1/login/`);
 }
+
 function api_v1_signup_create(payload) {
-  return komatsuHATSimulationAPI.post(`/api/v1/signup/`, payload.data)
+  return komatsuHATSimulationAPI.post(`/api/v1/signup/`, payload.data);
 }
+
 function modules_terms_and_conditions_list(payload) {
-  return komatsuHATSimulationAPI.get(`/modules/terms-and-conditions/`)
+  return komatsuHATSimulationAPI.get(`/modules/terms-and-conditions/`);
 }
+
 function modules_terms_and_conditions_create(payload) {
-  return komatsuHATSimulationAPI.post(
-    `/modules/terms-and-conditions/`,
-    payload.data
-  )
+  return komatsuHATSimulationAPI.post(`/modules/terms-and-conditions/`, payload.data);
 }
+
 function modules_terms_and_conditions_read(payload) {
-  return komatsuHATSimulationAPI.get(
-    `/modules/terms-and-conditions/${payload.id}/`
-  )
+  return komatsuHATSimulationAPI.get(`/modules/terms-and-conditions/${payload.id}/`);
 }
+
 function modules_terms_and_conditions_update(payload) {
-  return komatsuHATSimulationAPI.put(
-    `/modules/terms-and-conditions/${payload.id}/`,
-    payload.data
-  )
+  return komatsuHATSimulationAPI.put(`/modules/terms-and-conditions/${payload.id}/`, payload.data);
 }
+
 function modules_terms_and_conditions_partial_update(payload) {
-  return komatsuHATSimulationAPI.patch(
-    `/modules/terms-and-conditions/${payload.id}/`,
-    payload.data
-  )
+  return komatsuHATSimulationAPI.patch(`/modules/terms-and-conditions/${payload.id}/`, payload.data);
 }
+
 function modules_terms_and_conditions_delete(payload) {
-  return komatsuHATSimulationAPI.delete(
-    `/modules/terms-and-conditions/${payload.id}/`
-  )
+  return komatsuHATSimulationAPI.delete(`/modules/terms-and-conditions/${payload.id}/`);
 }
+
 function rest_auth_login_create(payload) {
-  return komatsuHATSimulationAPI.post(`/rest-auth/login/`, payload.data)
+  return komatsuHATSimulationAPI.post(`/rest-auth/login/`, payload.data);
 }
+
 function rest_auth_logout_list(payload) {
-  return komatsuHATSimulationAPI.get(`/rest-auth/logout/`)
+  return komatsuHATSimulationAPI.get(`/rest-auth/logout/`);
 }
+
 function rest_auth_logout_create(payload) {
-  return komatsuHATSimulationAPI.post(`/rest-auth/logout/`)
+  return komatsuHATSimulationAPI.post(`/rest-auth/logout/`);
 }
+
 function rest_auth_password_change_create(payload) {
-  return komatsuHATSimulationAPI.post(
-    `/rest-auth/password/change/`,
-    payload.data
-  )
+  return komatsuHATSimulationAPI.post(`/rest-auth/password/change/`, payload.data);
 }
+
 function rest_auth_password_reset_create(payload) {
-  return komatsuHATSimulationAPI.post(
-    `/rest-auth/password/reset/`,
-    payload.data
-  )
+  return komatsuHATSimulationAPI.post(`/rest-auth/password/reset/`, payload.data);
 }
+
 function rest_auth_password_reset_confirm_create(payload) {
-  return komatsuHATSimulationAPI.post(
-    `/rest-auth/password/reset/confirm/`,
-    payload.data
-  )
+  return komatsuHATSimulationAPI.post(`/rest-auth/password/reset/confirm/`, payload.data);
 }
+
 function rest_auth_registration_create(payload) {
-  return komatsuHATSimulationAPI.post(`/rest-auth/registration/`, payload.data)
+  return komatsuHATSimulationAPI.post(`/rest-auth/registration/`, payload.data);
 }
+
 function rest_auth_registration_verify_email_create(payload) {
-  return komatsuHATSimulationAPI.post(
-    `/rest-auth/registration/verify-email/`,
-    payload.data
-  )
+  return komatsuHATSimulationAPI.post(`/rest-auth/registration/verify-email/`, payload.data);
 }
+
 function rest_auth_user_read(payload) {
-  return komatsuHATSimulationAPI.get(`/rest-auth/user/`)
+  return komatsuHATSimulationAPI.get(`/rest-auth/user/`);
 }
+
 function rest_auth_user_update(payload) {
-  return komatsuHATSimulationAPI.put(`/rest-auth/user/`, payload.data)
+  return komatsuHATSimulationAPI.put(`/rest-auth/user/`, payload.data);
 }
+
 function rest_auth_user_partial_update(payload) {
-  return komatsuHATSimulationAPI.patch(`/rest-auth/user/`, payload.data)
+  return komatsuHATSimulationAPI.patch(`/rest-auth/user/`, payload.data);
 }
+
 export const apiService = {
   api_v1_login_create,
   api_v1_signup_create,
@@ -105,4 +103,4 @@ export const apiService = {
   rest_auth_user_read,
   rest_auth_user_update,
   rest_auth_user_partial_update
-}
+};
